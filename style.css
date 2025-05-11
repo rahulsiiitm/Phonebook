@@ -1,0 +1,233 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c3c3c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Phone Container */
+.phone-container {
+    width: 320px;
+    height: 85vh;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.contacts-container {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    text-align: center;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Header */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#open-add-form {
+    background: #008B76;
+    color: white;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#open-add-form:hover {
+    background: #006e5e;
+    transform: scale(1.05);
+}
+
+/* Search Input */
+#search-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Contact List */
+#contacts-list {
+    margin-top: 10px;
+    max-height: 460px;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e2f7f5;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 6px 0;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact:hover {
+    background: #c8ede9;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.contact-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #e74c3c;
+    transition: all 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+    color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Modal */
+#add-contact-modal, #edit-contact-modal {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+.modal-content {
+    background: rgb(245 245 245);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #333;
+    transform: scale(1.1);
+}
+
+form input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #008B76;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #006e5e;
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background: #ccc;
+    color: #333;
+    margin-top: 10px;
+}
+
+.cancel-btn:hover {
+    background: #aaa;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #008B76;
+    padding: 7px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 20px;
+}
+
+.bottom-nav .nav-link:hover,
+.bottom-nav .nav-link.active {
+    background: #006e5e;
+    border-radius: 5px;
+    flex-grow: 0.6;
+}
+
+.fav-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+}
+
+.fav-btn:hover {
+    color: orange;
+}
